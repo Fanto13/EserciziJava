@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="io.debezium.connector.mysql" type="repository">
+    <properties maven-id="io.debezium:debezium-connector-mysql:2.1.3.Final" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/debezium/debezium-connector-mysql/2.1.3.Final/debezium-connector-mysql-2.1.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/debezium/debezium-core/2.1.3.Final/debezium-core-2.1.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/debezium/debezium-api/2.1.3.Final/debezium-api-2.1.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.13.3/jackson-databind-2.13.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.13.3/jackson-annotations-2.13.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.3/jackson-datatype-jsr310-2.13.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/debezium/debezium-storage-kafka/2.1.3.Final/debezium-storage-kafka-2.1.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/debezium/debezium-storage-file/2.1.3.Final/debezium-storage-file-2.1.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/debezium/debezium-ddl-parser/2.1.3.Final/debezium-ddl-parser-2.1.3.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.8/antlr4-runtime-4.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/zendesk/mysql-binlog-connector-java/0.27.2/mysql-binlog-connector-java-0.27.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/luben/zstd-jni/1.5.0-2/zstd-jni-1.5.0-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.29/mysql-connector-java-8.0.29.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
