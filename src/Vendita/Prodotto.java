@@ -10,8 +10,8 @@ public class Prodotto {
         this.codp = codp;
     }
     public Prodotto(){
-        this.codp ="";
-        this.descrizione="";
+        codp ="";
+        descrizione="";
         this.prezzo=0;
     }
     public String getCodp() {
@@ -24,21 +24,22 @@ public class Prodotto {
         return prezzo;
     }
     public String toString() {
-        return "Codice prodotto: " + codp + "\nDescrizione: " + descrizione + "\nPrezzo: " + prezzo;
+        return "Codice prodotto: " + codp + "| Descrizione: " + descrizione + "| Prezzo: " + prezzo;
     }
-    public String visualizza(Connection con) {
+    public String visualizza(String codp, Connection con) {
         String result = "";
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM prodotto WHERE codp = '" + codp + "'");
             if (rs.next()) {
-                result = "Codice prodotto: " + rs.getString("codp")
-                        + " | Descrizione: " + rs.getString("descrizione")
-                        + " | Prezzo: " + rs.getInt("prezzo")+ "\n";
+                result = "Codice prodotto: " + rs.getString("codp") +
+                         " | Descrizione: " + rs.getString("descrizione") +
+                         " | Prezzo: " + rs.getInt("prezzo");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
     }
+
 }

@@ -28,18 +28,18 @@ public class Main {
         conn = DriverManager.getConnection(URL, info);
 
         //
-        System.out.println("Connected to database correctly");
+        System.out.println("Connected to database correctly\n");
 
         // creazione oggetto Vendita.Prodotto con codice P1
         Prodotto prodotto = new Prodotto("P1");
 
-        System.out.println(prodotto.visualizza(conn));
-
+        System.out.println(prodotto.visualizza("P1", conn));
+        Fornisce.stampaForniture("P1", conn);
 
         // esecuzione Query B e visualizzazione risultati
         try {
             //faccio la query B
-            System.out.println("Ecco ora l'output della query B:");
+            System.out.println("\nEcco ora l'output della query B:");
             String sql = "SELECT codf, anno, SUM(qty) AS totale_qty FROM fornisce GROUP BY anno, codf";
             stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
