@@ -31,7 +31,56 @@ public class Main {
 
 	      stmt = conn.createStatement();
 	      ResultSet rs = stmt.executeQuery(query);
+		  /*
+		if (rs.next()) {
+			this.codc = rs.getString("codc");
+			this.nome_cliente = rs.getString("nome_cliente");
+			this.citta = rs.getString("citta");
+			this.clienteEsiste = true;
+		} else {
+			codc = "";
+			nome_cliente = "";
+			citta = "";
+			clienteEsiste = false;
+		}
 
+		if (cliente.clienteEsiste == true) { // se lo studente esiste, lo cercherà nel database e lo manderà in output
+			System.out.println("Trovato lo " + cliente);
+
+		} else {
+			System.out.println("Studente con matricola " + codc + "non trovato"); // butterà fuori un oggetto vuoto
+		}
+
+		if (!rs.next()) {
+			sql = "INSERT INTO cliente(codc, nome_cliente, citta) VALUES ('" + this.codc + "'" + ",'" + this.nome_cliente + "' ," + "'" + this.citta + "');";
+			stmt.executeUpdate(sql);
+		} else {
+			System.out.println("Cliente già esistente");
+			sql = "UPDATE cliente SET  citta = '" + this.citta + "' , nome_cliente = '" + this.nome_cliente + "' WHERE codc = '" + this.codc + "' ;";
+			stmt.executeUpdate(sql);
+		}
+
+		public void removeClient(Connection cn) throws Exception {
+			try {
+				stmt = cn.createStatement();
+				sql = "SELECT codc FROM cliente WHERE codc = '" + this.codc + "'";
+				rs = stmt.executeQuery(sql);
+				if (!rs.next()) {
+					System.out.println("Studente non trovato");
+				} else {
+					sql = "DELETE FROM cliente WHERE codc = '" + this.codc + "'";
+					int result = stmt.executeUpdate(sql);
+					if (result > 0) {
+						System.out.println("Cliente eliminato con successo");
+					} else {
+						System.out.println("Nessun cliente eliminato");
+					}
+				}
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			/*
+		   */
 	      while(rs.next()){
 		         //Retrieve by column name
 	    	  
@@ -46,7 +95,7 @@ public class Main {
 		         //Display values
 		         System.out.print("MATR: " + matr);
 		         System.out.print(", NOME: " + nome);
-		         System.out.print(", Citt�: " + citta);
+		         System.out.print(", Città: " + citta);
 		         System.out.println(", Anno: " + anno);
 			      }
 
